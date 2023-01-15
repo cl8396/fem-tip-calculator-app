@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-neutral-300">
+    <img src="images/logo.svg" class="logo" />
+
+    <main class="calculator bg-neutral-100">
+      <div class="calulator__input text-neutral-600">
+        <label for="bill-value" class="input-label">Bill</label>
+        <input
+          type="text"
+          id="bill-value"
+          name="bill-value"
+          class="text-neutral-800 input-field"
+          data-icon="bill-icon"
+        />
+
+        <div>
+          <label for="tip-values" class="input-label">Select Tip %</label>
+          <div class="btn-group" id="tip-values">
+            <label for="tip-value-5" class="tip-amount-btn">5%</label>
+
+            <input
+              type="radio"
+              name="tip-value"
+              id="tip-value-5"
+              class="hidden"
+            />
+
+            <label for="tip-value-10" class="tip-amount-btn">10%</label>
+
+            <input
+              type="radio"
+              name="tip-value"
+              id="tip-value-10"
+              class="hidden"
+            />
+
+            <label for="tip-value-15" class="tip-amount-btn">15%</label>
+
+            <input
+              type="radio"
+              name="tip-value"
+              id="tip-value-15"
+              class="hidden"
+            />
+
+            <label for="tip-value-25" class="tip-amount-btn">25%</label>
+            <input
+              type="radio"
+              name="tip-value"
+              id="tip-value-25"
+              class="hidden"
+            />
+
+            <label for="tip-value-50" class="tip-amount-btn">50%</label>
+            <input
+              type="radio"
+              name="tip-value"
+              id="tip-value-50"
+              class="hidden"
+            />
+
+            <input
+              type="text"
+              name="tip-value"
+              id="tip-value-custom"
+              placeholder="Custom"
+              class="input-field"
+              maxlength="4"
+            />
+          </div>
+        </div>
+
+        <label for="number-of-people" class="input-label"
+          >Number of People</label
+        >
+        <input
+          type="text"
+          id="number-of-people"
+          name="number-of-people"
+          class="input-field input-field--people"
+          data-icon="person-icon"
+        />
+      </div>
+
+      <div class="calculator__output bg-neutral-800 text-neutral-100">
+
+        <div class="output-grid">
+          <div class="highlight">
+            <label for="tip-cost-pp" class="output-label">Tip Amount</label>
+            <p class="output-label-append">/ person</p>
+          </div>
+          <output id="tip-cost-pp" class="output-field text-neutral-500 highlight">$0.00</output>
+          
+          <div class="highlight">
+            <label for="total-cost-pp" class="output-label">Total</label>
+            <p class="output-label-append">/ person</p>
+          </div>
+          <output id="total-cost-pp" class="output-field text-neutral-500">$0.00</output>
+        </div>
+        
+
+        <button class="reset-button">Reset</button>
+      </div>
+    </main>
+  </body>
+</html>
